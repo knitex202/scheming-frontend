@@ -1,0 +1,34 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-schemingfrontend-dev-ca503-authRole",
+      "UnauthRoleArn": "arn:aws:iam::851725613084:role/amplify-schemingfrontend-dev-ca503-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::851725613084:role/amplify-schemingfrontend-dev-ca503-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-schemingfrontend-dev-ca503-deployment",
+      "UnauthRoleName": "amplify-schemingfrontend-dev-ca503-unauthRole",
+      "StackName": "amplify-schemingfrontend-dev-ca503",
+      "StackId": "arn:aws:cloudformation:us-east-2:851725613084:stack/amplify-schemingfrontend-dev-ca503/e80f2ab0-0ef1-11ef-bd44-064b6d290fd1",
+      "AmplifyAppId": "d25diqeqk7qjd9",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-schemingfrontend-dev-ca503-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "schemingItemsApi": {
+          "deploymentBucketName": "amplify-schemingfrontend-dev-ca503-deployment",
+          "s3Key": "amplify-builds/schemingItemsApi-506b434d394569634e2f-build.zip"
+        },
+        "schemingfrontend4d3cb845": {
+          "deploymentBucketName": "amplify-schemingfrontend-dev-ca503-deployment",
+          "s3Key": "amplify-builds/schemingfrontend4d3cb845-4a314668345478524149-build.zip"
+        }
+      },
+      "auth": {
+        "schemingfrontend": {}
+      },
+      "api": {
+        "itemsApi": {}
+      }
+    }
+  }
+}

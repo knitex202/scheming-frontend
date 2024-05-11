@@ -1,0 +1,90 @@
+{
+  "api": {
+    "itemsApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "schemingItemsApi"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "schemingfrontend": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed"
+    }
+  },
+  "function": {
+    "schemingItemsApi": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "schemingfrontend4d3cb845": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_schemingItemsApi_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "schemingItemsApi"
+        }
+      ]
+    },
+    "AMPLIFY_function_schemingItemsApi_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "schemingItemsApi"
+        }
+      ]
+    },
+    "AMPLIFY_function_schemingfrontend4d3cb845_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "schemingfrontend4d3cb845"
+        }
+      ]
+    },
+    "AMPLIFY_function_schemingfrontend4d3cb845_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "schemingfrontend4d3cb845"
+        }
+      ]
+    }
+  }
+}
