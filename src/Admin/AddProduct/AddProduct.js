@@ -1,12 +1,11 @@
 import React from "react";
 
-import Category from "../Category/Category";
-import ListBox from "../../Components/Listbox/ListBox";
+import Category from "../AdminComponents/Category/Category";
 import FileUpload from "../../Components/Fileupload/FileUpload";
 
 function AddProduct() {
   return (
-    <div className="p-16 ">
+    <div className="container p-16 ">
       <div>
         <p className=" font-poppins text-4xl text-gray-800 font-semibold">
           Add Product
@@ -29,8 +28,8 @@ function AddProduct() {
             cols="30"
             rows="5"></textarea>
         </div>
-        <div className="flex mt-4">
-          <div className="mr-4">
+        <div className="flex flex-col lg:flex-row md:flex-col sm:flex-col w-full mt-4">
+          <div className=" w-48 mr-4">
             <p className=" font-poppins font-semibold text-gray-500">Price</p>
             <input
               className=" mt-2 w-32 h-9 border rounded-md text-gray-600 text-center font-medium focus:outline-none ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-500  "
@@ -48,13 +47,14 @@ function AddProduct() {
           </div>
         </div>
         <div className="mt-4">
-            <FileUpload/>
+          <FileUpload />
         </div>
         <div className="flex justify-end">
-        <button className="w-32 h-12 rounded-xl  font-medium text-white bg-purple-600 hover:bg-purple-800">+ Submit Item</button>
+          <button className="w-32 h-12 rounded-xl  font-medium text-white bg-purple-600 hover:bg-purple-800">
+            + Submit Item
+          </button>
         </div>
       </div>
-      
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Dropdown({title, items}) {
     const [show, setShow] = useState(false)
@@ -9,7 +10,7 @@ function Dropdown({title, items}) {
 
     const item = ()=> {
         return items.map((item,index)=>{
-           return <li className='ml-8 text-left font-poppins font-semibold text-gray-600 hover:text-sky-600' key={index}><a href={item.link}>{item.name}</a></li>
+           return <li className='ml-8 text-left font-poppins font-semibold text-gray-600 hover:text-sky-600' key={index}><Link to={item.link}>{item.name}</Link></li>
         })
     }
   return (
